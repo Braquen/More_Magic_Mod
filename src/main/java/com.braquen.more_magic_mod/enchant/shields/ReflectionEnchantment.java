@@ -1,15 +1,12 @@
 package com.braquen.more_magic_mod.enchant.shields;
 
 import com.braquen.more_magic_mod.init.EnchantmentInit;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.Fireball;
-import net.minecraft.world.entity.projectile.FireworkRocketEntity;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -44,7 +41,13 @@ public class ReflectionEnchantment extends ShieldEnchantment{
 
             Entity projectile = event.getDamageSource().getDirectEntity();
             LivingEntity blocker = event.getEntity();
-            int level = EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.REFLECTION.get(), blocker);
+
+            ItemStack shield = blocker.getMainHandItem();
+            if (!(shield.getItem() instanceof ShieldItem))
+                shield = blocker.getOffhandItem();
+            if (!(shield.getItem() instanceof ShieldItem)) return;
+
+            int level =  shield.getEnchantmentLevel(EnchantmentInit.REFLECTION.get());
 
             if (projectile instanceof Projectile && level > 0) { //Reflection only does something if the attack in question is a projectile
 

@@ -27,7 +27,7 @@ public class GrudgeEnchantment extends Enchantment {
     }
 
     //handler for revenge multiplier
-    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
+    @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE) //Dopostattack doesn't work bc it doesn't differentiate between slots
     public static class AttackHandler {
         @SubscribeEvent
         public static void takeRevenge(LivingAttackEvent event){
@@ -41,15 +41,12 @@ public class GrudgeEnchantment extends Enchantment {
             if(level <= 0 || !(attacker.getLastDamageSource().getEntity() instanceof LivingEntity instigator)) return;
             //Note: using getLastDamageSource() means that taking damage from a non-LivingEntity will remove the revenge bonus: the last player/mob that hit you will NOT be the last damage source
             //Using getLastMobHurt and getLastPlayerHurt might be better
-            System.out.println("revenge bonus available");
 
             LivingEntity victim = event.getEntity();
 
             if(victim == instigator){
-                float punishment = 0.5f * level + 0.5f;
+                float punishment = 0.25f * level * event.getAmount();// <level> * 25% more damage
                 victim.hurt(DamageSource.thorns(attacker), punishment);
-
-                System.out.println("taking revenge");
             }
         }
     }

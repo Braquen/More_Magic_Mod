@@ -3,6 +3,8 @@ package com.braquen.more_magic_mod.init;
 
 import com.braquen.more_magic_mod.enchant.shields.ReboundEnchantment;
 import com.braquen.more_magic_mod.enchant.swords.GrudgeEnchantment;
+import com.braquen.more_magic_mod.enchant.totems.BerserkEnchantment;
+import com.braquen.more_magic_mod.enchant.totems.HeatWaveEnchantment;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -18,4 +20,8 @@ public class EnchantmentInit {
     public static final RegistryObject<Enchantment> REBOUND = ENCHANTMENTS.register("rebound", ReboundEnchantment::new);
 
     public static final RegistryObject<Enchantment> GRUDGE = ENCHANTMENTS.register("grudge", GrudgeEnchantment::new);
+
+    public static final RegistryObject<Enchantment> BERSERK = ENCHANTMENTS.register("berserk", BerserkEnchantment::new);
+    public static final RegistryObject<Enchantment> HEATWAVE = ENCHANTMENTS.register("heatwave", HeatWaveEnchantment::new);
+
 }

@@ -6,7 +6,7 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 
 public abstract class ShieldEnchantment extends Enchantment {
-    static EnchantmentCategory SHIELD = EnchantmentCategory.create("shield", item -> item.getClass() == ShieldItem.class);
+    static EnchantmentCategory SHIELD = EnchantmentCategory.create("shield", item -> item instanceof ShieldItem);
     public ShieldEnchantment(net.minecraft.world.item.enchantment.Enchantment.Rarity rarity) {
         super(rarity, SHIELD, new EquipmentSlot[]{EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND});
     }

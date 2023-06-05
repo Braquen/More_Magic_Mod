@@ -5,6 +5,9 @@ import com.braquen.more_magic_mod.enchant.shields.ReboundEnchantment;
 import com.braquen.more_magic_mod.enchant.swords.GrudgeEnchantment;
 import com.braquen.more_magic_mod.enchant.totems.BerserkEnchantment;
 import com.braquen.more_magic_mod.enchant.totems.HeatWaveEnchantment;
+import com.braquen.more_magic_mod.enchant.totems.MartyrdomEnchantment;
+import com.braquen.more_magic_mod.enchant.totems.RebreatherEnchantment;
+import com.braquen.more_magic_mod.enchant.totems.SpiteEnchantment;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,5 +26,8 @@ public class EnchantmentInit {
 
     public static final RegistryObject<Enchantment> BERSERK = ENCHANTMENTS.register("berserk", BerserkEnchantment::new);
     public static final RegistryObject<Enchantment> HEATWAVE = ENCHANTMENTS.register("heatwave", HeatWaveEnchantment::new);
+    public static final RegistryObject<Enchantment> MARTYRDOM = ENCHANTMENTS.register("martyrdom", MartyrdomEnchantment::new);
+    public static final RegistryObject<Enchantment> REBREATHER = ENCHANTMENTS.register("rebreather", RebreatherEnchantment::new);
+    public static final RegistryObject<Enchantment> SPITE = ENCHANTMENTS.register("spite", SpiteEnchantment::new);
 
 }

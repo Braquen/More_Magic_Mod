@@ -35,7 +35,7 @@ public class BerserkEnchantment extends TotemEnchantment{
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class PopHandler {
-        @SubscribeEvent(priority = EventPriority.LOWEST)
+        @SubscribeEvent
         public static void grantStrength(LivingUseTotemEvent event) {
 
             LivingEntity entity = event.getEntity();

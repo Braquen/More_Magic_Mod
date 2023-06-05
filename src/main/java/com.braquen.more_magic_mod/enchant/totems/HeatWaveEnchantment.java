@@ -38,10 +38,11 @@ public class HeatWaveEnchantment extends TotemEnchantment{
             int level =  totem.getEnchantmentLevel(EnchantmentInit.HEATWAVE.get());
 
             if (level > 0){
+                System.out.println("Burning enemies");
 
                 AABB AOE = entity.getBoundingBox().inflate(9);// 9 blocks in every direction
                 Predicate<LivingEntity> isAttacker = (target) -> {
-                        return (target.canAttack(entity)); //Anything that can hurt us
+                        return !(target.isAlliedTo(entity)); //Anything not our friend
                 };
                 Consumer<LivingEntity> burn = (livingEntity) -> {
                         livingEntity.setSecondsOnFire(10);

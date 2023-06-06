@@ -1,6 +1,7 @@
 package com.braquen.more_magic_mod.enchant.totems;
 
-import com.braquen.more_magic_mod.init.EnchantmentInit;
+import com.braquen.more_magic_mod._init.EnchantmentInit;
+import com.braquen.more_magic_mod.misc.ModDamageSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
@@ -25,16 +26,16 @@ public class SpiteEnchantment extends TotemEnchantment{
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE)
     public static class PopHandler {
         @SubscribeEvent(priority = EventPriority.LOWEST)
-        public static void grantStrength(LivingUseTotemEvent event) {
+        public static void punishAttacker(LivingUseTotemEvent event) {
 
             LivingEntity entity = event.getEntity();
             ItemStack totem = event.getTotem();
 
             int level = totem.getEnchantmentLevel(EnchantmentInit.SPITE.get());
 
-            if (level > 0 && entity.getLastDamageSource().getEntity() instanceof LivingEntity instigator) {
-                System.out.println("Punishing last attacker");
-                instigator.hurt(DamageSource.thorns(entity).bypassArmor().bypassEnchantments().bypassMagic(), 30);
+            if (level > 0 && event.getSource().getEntity() instanceof LivingEntity instigator) {
+                System.out.println("Punishing attacker");
+                instigator.hurt(ModDamageSource.karma(entity), 60);
             }
         }
     }

@@ -1,4 +1,5 @@
 {
+  "enchantment.more_magic_mod.lucky_break": "Lucky Break",
 
   "enchantment.more_magic_mod.reflection": "Reflection",
   "enchantment.more_magic_mod.rebound": "Rebound",
@@ -9,6 +10,9 @@
   "enchantment.more_magic_mod.heatwave": "Heat Wave",
   "enchantment.more_magic_mod.martyrdom": "Martyrdom",
   "enchantment.more_magic_mod.rebreather": "Rebreather",
-  "enchantment.more_magic_mod.spite": "Spite"
+  "enchantment.more_magic_mod.spite": "Spite",
+
+
+  "death.attack.more_magic_mod_karma": "%2$s got revenge on %1$s"
 
 }

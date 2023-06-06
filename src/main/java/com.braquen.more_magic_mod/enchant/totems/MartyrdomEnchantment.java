@@ -1,12 +1,8 @@
 package com.braquen.more_magic_mod.enchant.totems;
 
-import com.braquen.more_magic_mod.init.EnchantmentInit;
-import net.minecraft.world.InteractionResult;
+import com.braquen.more_magic_mod._init.EnchantmentInit;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.item.PrimedTnt;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.living.LivingUseTotemEvent;

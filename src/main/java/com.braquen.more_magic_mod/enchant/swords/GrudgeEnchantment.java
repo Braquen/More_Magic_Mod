@@ -1,6 +1,7 @@
 package com.braquen.more_magic_mod.enchant.swords;
 
-import com.braquen.more_magic_mod.init.EnchantmentInit;
+import com.braquen.more_magic_mod._init.EnchantmentInit;
+import com.braquen.more_magic_mod.misc.ModDamageSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
@@ -46,7 +47,7 @@ public class GrudgeEnchantment extends Enchantment {
 
             if(victim == instigator){
                 float punishment = 0.25f * level * event.getAmount();// <level> * 25% more damage
-                victim.hurt(DamageSource.thorns(attacker), punishment);
+                victim.hurt(ModDamageSource.karma(attacker), punishment);
             }
         }
     }

@@ -1,16 +1,12 @@
 package com.braquen.more_magic_mod.enchant.totems;
 
-import com.braquen.more_magic_mod.init.EnchantmentInit;
+import com.braquen.more_magic_mod._init.EnchantmentInit;
 import net.minecraft.world.entity.*;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.entity.EntityTypeTest;
 import net.minecraft.world.phys.AABB;
 import net.minecraftforge.event.entity.living.LivingUseTotemEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.function.Consumer;

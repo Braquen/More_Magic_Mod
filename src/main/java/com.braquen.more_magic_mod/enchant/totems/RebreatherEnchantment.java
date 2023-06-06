@@ -1,6 +1,6 @@
 package com.braquen.more_magic_mod.enchant.totems;
 
-import com.braquen.more_magic_mod.init.EnchantmentInit;
+import com.braquen.more_magic_mod._init.EnchantmentInit;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;

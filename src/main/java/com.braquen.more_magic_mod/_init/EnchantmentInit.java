@@ -1,6 +1,7 @@
 //Author: Braquen
-package com.braquen.more_magic_mod.init;
+package com.braquen.more_magic_mod._init;
 
+import com.braquen.more_magic_mod.enchant.elytra.LuckyBreakEnchantment;
 import com.braquen.more_magic_mod.enchant.shields.ReboundEnchantment;
 import com.braquen.more_magic_mod.enchant.swords.GrudgeEnchantment;
 import com.braquen.more_magic_mod.enchant.totems.BerserkEnchantment;
@@ -18,6 +19,8 @@ import com.braquen.more_magic_mod.enchant.shields.ReflectionEnchantment;
 
 public class EnchantmentInit {
     public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, More_Magic_Mod.MODID);
+
+    public static final RegistryObject<Enchantment> LUCKY_BREAK = ENCHANTMENTS.register("lucky_break", LuckyBreakEnchantment::new);
 
     public static final RegistryObject<Enchantment> REFLECTION = ENCHANTMENTS.register("reflection", ReflectionEnchantment::new);
     public static final RegistryObject<Enchantment> REBOUND = ENCHANTMENTS.register("rebound", ReboundEnchantment::new);

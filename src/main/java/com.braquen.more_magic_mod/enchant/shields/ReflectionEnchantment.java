@@ -1,6 +1,6 @@
 package com.braquen.more_magic_mod.enchant.shields;
 
-import com.braquen.more_magic_mod.init.EnchantmentInit;
+import com.braquen.more_magic_mod._init.EnchantmentInit;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.LivingEntity;

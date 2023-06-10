@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.Mod;
 
 public class GrudgeEnchantment extends Enchantment {
     public GrudgeEnchantment() {
-        super(Rarity.VERY_RARE, EnchantmentCategory.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
+        super(Rarity.UNCOMMON, EnchantmentCategory.WEAPON, new EquipmentSlot[]{EquipmentSlot.MAINHAND});
     }
 
     @Override

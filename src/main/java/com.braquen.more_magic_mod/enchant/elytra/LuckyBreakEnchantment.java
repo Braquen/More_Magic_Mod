@@ -44,10 +44,10 @@ public class LuckyBreakEnchantment extends ElytraEnchantment{
                 int level =  elytra.getEnchantmentLevel(EnchantmentInit.LUCKY_BREAK.get());
 
                 if(level > 0) {
-                    if(elytra.getDamageValue() == elytra.getMaxDamage() - 1){//1 away from broken
+                    if(elytra.getDamageValue() == elytra.getMaxDamage() - 1){//broken
 
                         System.out.println("boutta break");
-                        elytra.setDamageValue(elytra.getDamageValue() - 1);
+                        elytra.setDamageValue(elytra.getDamageValue() - 1);//not broken :)
                     }
                 }
             }
@@ -65,7 +65,7 @@ public class LuckyBreakEnchantment extends ElytraEnchantment{
                 int level =  elytra.getEnchantmentLevel(EnchantmentInit.LUCKY_BREAK.get());
 
                 if(level > 0) {
-                    if(elytra.getDamageValue() >= elytra.getMaxDamage() - 2){//2 away from broken
+                    if(elytra.getDamageValue() == elytra.getMaxDamage() - 2){//1 away from broken
                         System.out.println("break that");
                         elytra.setDamageValue(elytra.getMaxDamage() - 1); //it is now broken
                     }
